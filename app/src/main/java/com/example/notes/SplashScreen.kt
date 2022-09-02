@@ -14,6 +14,7 @@ class SplashScreen : AppCompatActivity() {
         supportActionBar?.hide() //hide toolbar
 
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(Intent(this, MainActivity::class.java))
         }, 3000)
     }

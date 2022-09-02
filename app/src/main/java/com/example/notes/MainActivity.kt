@@ -1,5 +1,6 @@
 package com.example.notes
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -25,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+//        val intent = Intent(this, MainActivity::class.java)
+//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//        startActivity(intent)
+
 //        navController=findNavController(R.id.fragmentContainerView)
 //        setupActionBarWithNavController(navController) //setting nav controller with action bar (-> , <-)
 
@@ -39,8 +45,18 @@ class MainActivity : AppCompatActivity() {
         //bottomNavBar not working?
 //        binding.bottomNavBar.setupWithNavController(navController)
 
+//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
 
     }
+
+//    override fun onBackPressed() {
+//        Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show()
+//        val intent = Intent(Intent.ACTION_MAIN)
+//        intent.addCategory(Intent.CATEGORY_HOME)
+//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+//        startActivity(intent)
+//    }
 
 //below two functions re-starting the app instead of going to profile fragment..note->no exception is there though
 //    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -57,5 +73,7 @@ class MainActivity : AppCompatActivity() {
     override fun onNavigateUp(): Boolean {
         return navController.navigateUp() || super.onNavigateUp()
     }
+
+
 
 }

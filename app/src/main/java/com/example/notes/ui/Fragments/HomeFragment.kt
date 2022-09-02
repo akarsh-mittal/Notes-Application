@@ -2,6 +2,7 @@ package com.example.notes.ui.Fragments
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -100,4 +101,5 @@ class HomeFragment : Fragment(), NotesAdapter.NoteClickDeleteInterface, NotesAda
             Toast.makeText(context, "All Notes Deleted!", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

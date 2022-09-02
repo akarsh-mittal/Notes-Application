@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/register">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.notes.ui.Fragments.HomeFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createNotes2"
+            app:destination="@id/createNotes2" />
+        <action
+            android:id="@+id/action_homeFragment_to_editNotes"
+            app:destination="@id/editNotes" />
+        <action
+            android:id="@+id/action_homeFragment_to_register"
+            app:destination="@id/register" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createNotes2"
+        android:name="com.example.notes.ui.Fragments.CreateNotes"
+        android:label="Create Note"
+        tools:layout="@layout/fragment_create_notes" >
+        <action
+            android:id="@+id/action_createNotes2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editNotes"
+        android:name="com.example.notes.ui.Fragments.EditNotes"
+        android:label="Edit Note"
+        tools:layout="@layout/fragment_edit_notes" >
+        <action
+            android:id="@+id/action_editNotes_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.notes.model.Notes" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.notes.ui.Fragments.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

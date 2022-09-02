@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--context can be removed from up above-->
+
+    <!--linear layout is more simple and less resource hungry than constraint layout(used to make complex layouts)
+    orientation attribute in linearlayout view group align the children in single direction, here vertical
+    match parent->at least parent
+    wrap content->at most parent
+     -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:id="@+id/photo2"/>
+
+
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Title.."
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="177dp"
+            android:layout_marginVertical="30dp"
+            android:gravity="top"
+            android:hint="Notes.."
+            android:padding="10dp">
+
+        </EditText>
+
+
+            <Button
+                android:id="@+id/btnEdtDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/save_edit_shape"
+                android:layout_margin="15dp"
+                android:text="UPDATE NOTE"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnEdtDel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/save_edit_shape"
+                android:layout_gravity="top"
+                android:layout_margin="15dp"
+                android:text="DELETE NOTE"
+                android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="751dp"-->
+    <!--        android:id="@+id/btnEdtDone"-->
+    <!--        android:layout_gravity="bottom|right"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:src="@drawable/done">-->
+
+    <!--    </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+
+
+</FrameLayout>
